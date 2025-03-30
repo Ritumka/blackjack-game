@@ -1,15 +1,21 @@
 <html>
-    <head>
-        <!-- Link to the index.css file
+
+<head>
+    <!-- Link to the index.css file
         E.g. search for "how to link to css from html" -->
-        <link rel="stylesheet" href="index.css"> 
-    </head>
-    <body>
-        <h1>Blackjack</h1>
-        <p id="message-el">Want to play a round?</p>
-        <p id="cards-el">Cards:</p>
-        <p id="sum-el">Sum:</p>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <h1>Blackjack</h1>
+    <p id="message-el">Want to play a round?</p>
+    <p id="cards-el">Cards:</p>
+    <p id="sum-el">Sum:</p>
+    <div class="two-buttons">
         <button onclick="startGame()">START GAME</button>
-        <script src="index.js"></script>
-    </body>
+        <button onclick="newCard()">NEW BUTTON</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+
 </html>
