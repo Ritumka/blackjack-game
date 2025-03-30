@@ -27,13 +27,19 @@ function getRandomCard() {
 }
 
 function startGame() {
-    isAlive = true
-    let firstCard = getRandomCard()
-    let secondCard = getRandomCard()
-    cards.push(firstCard)
-    cards.push(secondCard)
-    sum = firstCard + secondCard
-    renderGame()
+    if (!isAlive || hasBlackJack) {
+        isAlive = true
+        hasBlackJack = false
+        cards = []
+        cardsEl.textContent = "Cards: "
+
+        let firstCard = getRandomCard()
+        let secondCard = getRandomCard()
+        cards.push(firstCard)
+        cards.push(secondCard)
+        sum = firstCard + secondCard
+        renderGame()
+    }
 }
 
 function renderGame() {
@@ -56,7 +62,7 @@ function renderGame() {
 }
 
 function newCard() {
-    if (isAlive === true && hasBlackJack === false) {
+    if (isAlive && !hasBlackJack) {
         let card = getRandomCard()
         sum += card
         cards.push(card)
